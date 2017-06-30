@@ -10,12 +10,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const router = express.Router();
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const template = fs.readFileSync("templates/fill_the_form.html", "utf-8");
 =======
+=======
+>>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
 const db = require('./db');
 
 const template = fs.readFileSync("templates/random/fill_the_form.html", "utf-8");
 const result = fs.readFileSync('template/give_the_form.html', 'utf-8');
+<<<<<<< HEAD
+>>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
+=======
 >>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
 
 router.get("/", (req, res) => {
@@ -23,9 +29,12 @@ router.get("/", (req, res) => {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = router;
 
 =======
+=======
+>>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
 let a = 0, b = 0, c = 0, name = 0, clss = 0, school = 0;
 
 function replace(str, tag, value) {
@@ -74,6 +83,9 @@ app.get('/give_the_form', (req, res, next) => {
 module.exports = router;
 
 ////////////////////////////////////////////////////
+<<<<<<< HEAD
+>>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
+=======
 >>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
 
 
