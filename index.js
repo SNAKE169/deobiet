@@ -1,14 +1,8 @@
 const express = require('express');
 const fs = require('fs');
 const bodyParser = require('body-parser');
-<<<<<<< HEAD
 
 const app = express();
-
-=======
-
-const app = express();
->>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
 app.set('port', (process.env.PORT || 5000));
 
 app.use(express.static(__dirname + '/public'));
@@ -30,7 +24,6 @@ function replace(str, tag, value) {
 	return str.replace(`[${tag}]`, value);
 }
 
-<<<<<<< HEAD
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -42,9 +35,6 @@ app.use('/q3', require('./q3'));
 const template = fs.readFileSync('templates/index1.html', 'utf-8');
 
 
-=======
-
->>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
 app.get('/', (req, res) => {
     res.send(template);
 })
@@ -52,9 +42,3 @@ app.listen(app.get('port'), function() {
   console.log("Hello World");
 });
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 5f2337b1f9691535055cb2381cd80707e51a5980
