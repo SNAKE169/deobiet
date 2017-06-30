@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
-var fs = express('fs');
+var fs = require('fs');
 app.set('port', (process.env.PORT || 5000));
+
 
 app.use(express.static(__dirname + '/public'));
 
@@ -9,11 +10,12 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', function(req, res) {
-  res.send(adsa);
-  res.render('pages/index');
+app.get("/", function(req, res) {
+    var data = fs.readFileSync(__dirname + "/tes.html", "utf-8");
+	data = data.replace("Chào", "Hi");
+	res.write(data);
 });
 
 app.listen(app.get('port'), function() {
-  console.log('Node app is running on port', app.get('port'));
+  console.log("Hello World");
 });
