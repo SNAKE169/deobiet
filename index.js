@@ -12,7 +12,6 @@ app.set('view engine', 'ejs');
 
 app.get("/", function(req, res) {
     var data = fs.readFileSync(__dirname + "/tes.html", "utf-8");
-	data = data.replace("Chào", "Hi");
 	res.write(data);
 });
 
